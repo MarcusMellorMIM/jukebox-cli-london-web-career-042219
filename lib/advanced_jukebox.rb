@@ -26,11 +26,13 @@ end
 def list(my_songs)
   #this method is different! Collect the keys of the my_songs hash and 
   #list the songs by name
- songs.each do | k, v |
-    puts "#{k}. #{v}"
+  counter=0
+  my_songs.each do | k, v |
+    counter+=1
+    puts "#{counter}. #{k}"
   end
-
 end
+
 
 
 def play(my_songs)

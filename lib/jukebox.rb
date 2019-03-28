@@ -19,9 +19,9 @@ def help
 end
 
 def list( songs )
-  songs.each_with_index do | i, v |
+  songs.each_with_index do | v, i |
     puts "#{i+1}. #{v}"
   end
 end
 
-
+def play( songs )

@@ -61,14 +61,18 @@ run( songs )
   puts "Please enter a command:"
   
   choice=gets.chomp
-  case choice
-  when "help"
-    help
-  when "list"
-    list( songs )
-  when "play"
-    play
-  when "exit"
-    exit_jukebox
-  end
+  
+    case choice
+    while choice!="exit"
+      when "help"
+        help
+      when "list"
+        list( songs )
+      when "play"
+        play( songs )
+        break
+      when "exit"
+        exit_jukebox
+      end
+    end    
 end

@@ -25,3 +25,9 @@ def list( songs )
 end
 
 def play( songs )
+
+  puts "Please enter a song name or number:"
+  choice=gets.chomp
+  songs.each_with_index do | v, i |
+    puts "#{i+1}. #{v}"
+  end

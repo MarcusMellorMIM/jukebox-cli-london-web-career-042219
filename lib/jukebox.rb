@@ -46,7 +46,7 @@ def play( songs )
        end
      end
       if int_choice==0
-         "Invalid input, please try again"
+         puts "Invalid input, please try again"
       end
     end
   end

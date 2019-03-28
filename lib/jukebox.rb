@@ -67,8 +67,9 @@ def run( songs )
       when "list"
         list( songs )
       when "play"
-        play( songs )
-        break
+        if play( songs )
+          break
+        end
       when "exit"
         exit_jukebox
       end

@@ -55,7 +55,7 @@ def play(my_songs)
         selected=true
         song_path=my_songs[choice].sub("< path to this directory >/jukebox-cli",".")
         puts "playing #{song_path}"
- #       open my_songs[choice]
+        open my_songs[choice]
     else
       puts "Invalid input, please try again"
     end

@@ -26,16 +26,23 @@ end
 
 def play( songs )
 
-  puts "Please enter a song name or number:"
-  choice=gets.chomp
+  choice=""
   int_choice=0
-  songs.each_with_index do | v, i |
-    if choice==(i+1).to_s || choice==v
-      int_choice=i+1
-      puts "Playing <#{v}>"
-      break
+
+  while choice!="exit" || int_choice==0
+    puts "Please enter a song name or number:"
+    choice=gets.chomp
+
+    songs.each_with_index do | v, i |
+      if choice==(i+1).to_s || choice==v
+        int_choice=i+1
+        puts "Playing <#{v}>"
+        break
+      end
+    end
+
+    if int_choice==0
+        "Invalid input, please try again"
     end
   end
-  if int_choice==0
-      
 end

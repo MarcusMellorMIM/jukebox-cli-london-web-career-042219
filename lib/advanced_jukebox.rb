@@ -75,7 +75,6 @@ def run(my_songs)
   while choice!="exit"
       puts "Please enter a command:"
       choice=gets.chomp
-      puts choice
       case choice
       when "help"
         help

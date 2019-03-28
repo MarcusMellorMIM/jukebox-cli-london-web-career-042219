@@ -80,9 +80,9 @@ def run(my_songs)
       when "help"
         help
       when "list"
-        list( songs )
+        list( my_songs )
       when "play"
-        if play( songs )
+        if play( my_songs )
           break
         end
       when "exit"

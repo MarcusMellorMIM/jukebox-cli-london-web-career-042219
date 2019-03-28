@@ -56,14 +56,14 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-run( songs )
+def run( songs )
   help
-  puts "Please enter a command:"
-  
-  choice=gets.chomp
-  
-    case choice
-    while choice!="exit"
+  choice=""
+  while choice!="exit"
+      puts "Please enter a command:"
+      choice=gets.chomp
+      puts choice
+      case choice
       when "help"
         help
       when "list"
@@ -74,5 +74,5 @@ run( songs )
       when "exit"
         exit_jukebox
       end
-    end    
+  end    
 end

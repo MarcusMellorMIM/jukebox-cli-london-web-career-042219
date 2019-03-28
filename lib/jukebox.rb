@@ -28,6 +28,14 @@ def play( songs )
 
   puts "Please enter a song name or number:"
   choice=gets.chomp
+  int_choice=0
   songs.each_with_index do | v, i |
-    puts "#{i+1}. #{v}"
+    if choice==(i+1).to_s || choice==v
+      int_choice=i+1
+      puts "Playing <#{v}>"
+      break
+    end
   end
+  if int_choice==0
+      
+end

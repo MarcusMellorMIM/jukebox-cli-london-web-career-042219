@@ -54,7 +54,7 @@ def play(my_songs)
     if my_songs[choice]
         selected=true
         puts "playing #{my_songs[choice]}"
- #       open my_songs[choice]
+        open my_songs[choice]
     else
       puts "Invalid input, please try again"
     end

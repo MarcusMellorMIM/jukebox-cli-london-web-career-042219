@@ -28,28 +28,26 @@ def play( songs )
 
   choice=""
   int_choice=0
-  selecting=true
+  selected=false
 
-  while selecting
     puts "Please enter a song name or number:"
     choice=gets.chomp
 
-    if choice=="exit"
-      selecting=false
-    else
-      songs.each_with_index do | v, i |
-       if choice==(i+1).to_s || choice==v
+    songs.each_with_index do | v, i |
+      if choice==(i+1).to_s || choice==v
          int_choice=i+1
          puts "Playing <#{v}>"
-         selecting=false
+         selected=true
          break
-       end
-     end
-      if int_choice==0
-         puts "Invalid input, please try again"
       end
     end
-  end
+
+    if int_choice==0
+      puts "Invalid input, please try again"
+    end
+
+    selected
+
 end
 
 def exit_jukebox
